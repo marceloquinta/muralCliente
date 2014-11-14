@@ -11,6 +11,7 @@
     <string-array name="opcoes_menu">
         <item>Home</item>
         <item>Frase do dia</item>
+        <item>Mapa</item>
     </string-array>
 
     <!-- ! Frases ! -->
