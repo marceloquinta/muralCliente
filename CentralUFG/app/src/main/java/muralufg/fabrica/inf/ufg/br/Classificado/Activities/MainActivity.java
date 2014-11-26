@@ -1,14 +1,5 @@
-package br.ufg.inf.mobile2014.projetoufg.Activities;
+package muralufg.fabrica.inf.ufg.br.Classificado.Activities;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import br.ufg.inf.mobile2014.projetoufg.Notificacao;
-import br.ufg.inf.mobile2014.projetoufg.NotificacoesExpandableListAdapter;
-import br.ufg.inf.mobile2014.projetoufg.R;
-import br.ufg.inf.mobile2014.projetoufg.TituloNotificacoesExpandableList;
-import br.ufg.inf.mobile2014.projetoufg.Banco.BDAdapter;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -33,6 +24,16 @@ import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import muralufg.fabrica.inf.ufg.br.Classificado.Banco.BDAdapter;
+import muralufg.fabrica.inf.ufg.br.Classificado.Notificacao;
+import muralufg.fabrica.inf.ufg.br.Classificado.NotificacoesExpandableListAdapter;
+import muralufg.fabrica.inf.ufg.br.Classificado.TituloNotificacoesExpandableList;
+import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
 /**
  * Activity responsável pela exibição da parte principal da aplicação.

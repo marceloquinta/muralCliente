@@ -1,11 +1,11 @@
-package br.ufg.inf.mobile2014.projetoufg.Servidor;
+package muralufg.fabrica.inf.ufg.br.Classificado.Servidor;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 
-import br.ufg.inf.mobile2014.projetoufg.Notificacao;
+import muralufg.fabrica.inf.ufg.br.Classificado.Notificacao;
 
 /**
  * Classe criada para fabricar exemplos de notificação. Como não temos servidor,

@@ -1,7 +1,5 @@
-package br.ufg.inf.mobile2014.projetoufg.Activities;
+package muralufg.fabrica.inf.ufg.br.Classificado.Activities;
 
-import br.ufg.inf.mobile2014.projetoufg.R;
-import br.ufg.inf.mobile2014.projetoufg.Banco.BDAdapter;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -18,6 +16,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import muralufg.fabrica.inf.ufg.br.Classificado.Banco.BDAdapter;
+import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
 /**
  * Activity responsável pelo login do usuário.

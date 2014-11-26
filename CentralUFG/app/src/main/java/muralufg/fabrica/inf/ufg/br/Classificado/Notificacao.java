@@ -1,4 +1,4 @@
-package br.ufg.inf.mobile2014.projetoufg;
+package muralufg.fabrica.inf.ufg.br.Classificado;
 
 /**
  * Classe bean que modela uma notificação.

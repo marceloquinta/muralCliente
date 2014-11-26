@@ -1,4 +1,4 @@
-package br.ufg.inf.mobile2014.projetoufg;
+package muralufg.fabrica.inf.ufg.br.Classificado;
 
 import java.util.ArrayList;
 import java.util.List;

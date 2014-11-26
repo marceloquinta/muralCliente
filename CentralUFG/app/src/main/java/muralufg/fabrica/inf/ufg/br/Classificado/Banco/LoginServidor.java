@@ -1,8 +1,7 @@
-package br.ufg.inf.mobile2014.projetoufg.Banco;
+package muralufg.fabrica.inf.ufg.br.Classificado.Banco;
 
 import java.util.ArrayList;
-
-import br.ufg.inf.mobile2014.projetoufg.Notificacao;
+import muralufg.fabrica.inf.ufg.br.Classificado.Notificacao;
 
 /**
  * Interface para operações de registro de usuários e recebimento de notificações no servidor.

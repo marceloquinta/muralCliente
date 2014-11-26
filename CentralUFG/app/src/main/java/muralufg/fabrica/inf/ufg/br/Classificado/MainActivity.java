@@ -1,4 +1,4 @@
-package br.ufg.inf.mobile2014.projetoufg;
+package muralufg.fabrica.inf.ufg.br.Classificado;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +22,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
 public class MainActivity extends Activity {
     private DrawerLayout mDrawerLayout;
