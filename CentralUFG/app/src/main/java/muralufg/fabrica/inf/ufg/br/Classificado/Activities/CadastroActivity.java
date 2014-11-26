@@ -1,11 +1,5 @@
-package br.ufg.inf.mobile2014.projetoufg.Activities;
+package muralufg.fabrica.inf.ufg.br.Classificado.Activities;
 
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import br.ufg.inf.mobile2014.projetoufg.R;
-import br.ufg.inf.mobile2014.projetoufg.Banco.BDAdapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -18,8 +12,15 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import muralufg.fabrica.inf.ufg.br.Classificado.Banco.BDAdapter;
+import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
 /**
  * Activity de cadastro de usuários. Aqui, é possível cadastrar um usuário novo,

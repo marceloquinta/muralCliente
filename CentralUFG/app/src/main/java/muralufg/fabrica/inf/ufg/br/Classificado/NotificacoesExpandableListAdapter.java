@@ -1,4 +1,4 @@
-package br.ufg.inf.mobile2014.projetoufg;
+package muralufg.fabrica.inf.ufg.br.Classificado;
 
 import android.app.Activity;
 import android.util.SparseArray;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
 /**
  * Classe que serve de Adapter para a ExpandableList de notificações.

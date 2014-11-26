@@ -1,16 +1,16 @@
-package br.ufg.inf.mobile2014.projetoufg.Banco;
+package muralufg.fabrica.inf.ufg.br.Classificado.Banco;
 
 import java.util.ArrayList;
 
-import br.ufg.inf.mobile2014.projetoufg.Notificacao;
-import br.ufg.inf.mobile2014.projetoufg.Servidor.FabricaNotificacoes;
-import br.ufg.inf.mobile2014.projetoufg.Servidor.LoginServidorImpl;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+
+import muralufg.fabrica.inf.ufg.br.Classificado.Servidor.*;
+import muralufg.fabrica.inf.ufg.br.Classificado.Notificacao;
 
 /**
  * Classe para login e cadastro de usuários. Esta classe realiza login, cadastro

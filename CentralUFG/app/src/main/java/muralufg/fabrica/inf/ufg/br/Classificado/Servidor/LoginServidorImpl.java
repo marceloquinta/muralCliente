@@ -1,9 +1,10 @@
-package br.ufg.inf.mobile2014.projetoufg.Servidor;
+package muralufg.fabrica.inf.ufg.br.Classificado.Servidor;
 
 import java.util.ArrayList;
 
-import br.ufg.inf.mobile2014.projetoufg.Notificacao;
-import br.ufg.inf.mobile2014.projetoufg.Banco.LoginServidor;
+import muralufg.fabrica.inf.ufg.br.Classificado.Notificacao;
+import muralufg.fabrica.inf.ufg.br.Classificado.Banco.LoginServidor;
+
 
 /**
  * Classe responsável pelo login e cadastro de usuários no servidor, além do envio de notificações.

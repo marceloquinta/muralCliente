@@ -1,4 +1,4 @@
-package br.ufg.inf.mobile2014.projetoufg;
+package muralufg.fabrica.inf.ufg.br.Classificado;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -16,6 +16,8 @@ import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
 /**
  * Activity which displays a login screen to the user, offering registration as

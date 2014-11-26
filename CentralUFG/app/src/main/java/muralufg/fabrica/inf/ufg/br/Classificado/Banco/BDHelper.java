@@ -1,4 +1,4 @@
-package br.ufg.inf.mobile2014.projetoufg.Banco;
+package muralufg.fabrica.inf.ufg.br.Classificado.Banco;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
