@@ -67,9 +67,9 @@ import android.widget.ListView;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
-import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
+import muralufg.fabrica.inf.ufg.br.centralufg.mapa.MapaFragment;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -202,6 +202,8 @@ public class MainActivity extends ActionBarActivity {
 
             case 1:
                 return new FraseDoDiaFragment();
+            case 2:
+                return new MapaFragment();
 
             default:
                 Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida),
