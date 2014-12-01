@@ -52,20 +52,31 @@
 
 package muralufg.fabrica.inf.ufg.br.centralufg.model;
 
-public class Locais {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Local implements Parcelable {
 
     private int id;
     private String nome;
-    private String imagem;
     private String endereco;
     private String telefone;
     private String localizacaoGeografica;
+    private String imagem;
 
-    public Locais() {
+    public Local() {
 
     }
 
-    public Locais(int id, String nome, String imagem, String endereco, String telefone, String localizacaoGeografica) {
+    public Local (Parcel parcel){
+        this.nome = parcel.readString();
+        this.endereco = parcel.readString();
+        this.telefone = parcel.readString();
+        this.localizacaoGeografica = parcel.readString();
+        this.imagem = parcel.readString();
+    }
+
+    public Local(int id, String nome, String imagem, String endereco, String telefone, String localizacaoGeografica) {
         this.id = id;
         this.nome = nome;
         this.imagem = imagem;
@@ -88,14 +99,6 @@ public class Locais {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getImagem() {
-        return imagem;
-    }
-
-    public void setImagem(String imagem) {
-        this.imagem = imagem;
     }
 
     public String getEndereco() {
@@ -121,4 +124,38 @@ public class Locais {
     public void setLocalizacaoGeografica(String localizacaoGeografica) {
         this.localizacaoGeografica = localizacaoGeografica;
     }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(nome);
+        parcel.writeString(telefone);
+        parcel.writeString(endereco);
+        parcel.writeString(localizacaoGeografica);
+        parcel.writeString(imagem);
+    }
+
+    public static final Parcelable.Creator<Local> CREATOR = new Parcelable.Creator<Local>(){
+        @Override
+        public Local createFromParcel(Parcel parcel) {
+            return new Local(parcel);
+        }
+
+        @Override
+        public Local[] newArray(int i) {
+            return new Local[i];
+        }
+    };
 }

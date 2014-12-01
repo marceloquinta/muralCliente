@@ -64,16 +64,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
-import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.locais.fragments.LocaisFragment;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity  {
 
     private int TEMPO_ALERTA = 3000;
 

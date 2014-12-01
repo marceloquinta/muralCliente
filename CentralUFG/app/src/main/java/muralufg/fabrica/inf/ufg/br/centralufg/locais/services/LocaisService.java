@@ -1,16 +1,20 @@
 package muralufg.fabrica.inf.ufg.br.centralufg.locais.services;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
-import muralufg.fabrica.inf.ufg.br.centralufg.model.FraseDoDia;
+import muralufg.fabrica.inf.ufg.br.centralufg.model.Local;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.ServiceCompliant;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.SimpleConnection;
 
 public class LocaisService extends SimpleConnection {
 
-    private static final String URL = "http://fabrica2014.apiary-mock.com/frasedodia";
+    private static final String URL = "http://private-82161-muralcliente1.apiary-mock.com/locais";
 
     public LocaisService(ServiceCompliant handler) {
         super(handler,URL);
@@ -27,12 +31,24 @@ public class LocaisService extends SimpleConnection {
         switch (getHttpStatus()){
             case OK:
                 try {
-                    JSONObject object = new JSONObject(getResponse());
-                    String conteudo = object.getString("quote");
-                    String autor = object.getString("author");
+                    JSONArray list = new JSONArray(getResponse());
 
-                    FraseDoDia frase = new FraseDoDia(conteudo,autor);
-                    handler.readObject(frase);
+                    List<Local> listaDeLocais = new ArrayList<Local>();
+
+                    for (int i = 0; i < list.length(); i++) {
+                        Local local = new Local();
+                        JSONObject obj = (JSONObject) list.get(i);
+
+                        local.setId(obj.getInt("id"));
+                        local.setNome(obj.getString("nome"));
+                        local.setEndereco(obj.getString("endereco"));
+                        local.setTelefone(obj.getString("telefone"));
+                        local.setImagem(obj.getString("imagem"));
+                        local.setLocalizacaoGeografica(obj.getString("localizacaoGeografica"));
+                        listaDeLocais.add(local);
+                    }
+
+                    handler.readObject(listaDeLocais);
                 } catch (JSONException e) {
                     handler.handleError("Ocorreu um erro com "+ getResponse() + ": " + e.getLocalizedMessage());
                 }
