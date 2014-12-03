@@ -41,6 +41,10 @@ public class AnexoAdapter extends ArrayAdapter<OuvidoriaItemAnexo> {
         mItens.add(item);
     }
 
+    public List<OuvidoriaItemAnexo> getAll(){
+        return  mItens;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
