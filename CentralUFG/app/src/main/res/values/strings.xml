@@ -14,6 +14,7 @@
         <item>Frase do dia</item>
         <item>Cartão</item>
         <item>Compromissos</item>
+        <item>Ouvidoria</item>
     </string-array>
 
     <!--! Frases !-->
@@ -31,4 +32,18 @@
 
     <!--! Compromisso !-->
     <string name="diaDaSemana">Dia da Semana</string>
+
+    <!--! Ouvidoria !-->
+    <string name="action_anexar">Selecionar anexo</string>
+    <string name="action_anexar_camera">Camera</string>
+    <string name="action_anexar_imagem">Anexar imagem</string>
+    <string name="action_anexar_arquivo">Anexar arquivo</string>
+    <string name="action_enviar">Enviar</string>
+    <string name="titulo">Título</string>
+    <string name="data">Data</string>
+    <string name="descricao">Descrição</string>
+    <string name="nome_anexo">Nome do anexo</string>
+    <string name="excluir_anexo">x</string>
+    <string name="erro_tamanho_maximo_arquivo">Não é possível anexar um arquivo com mais de %s</string>
+    <string name="erro_arquivo_nao_existe">Arquivo não existe</string>
 </resources>
