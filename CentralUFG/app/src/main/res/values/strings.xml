@@ -14,6 +14,7 @@
         <item>Frase do dia</item>
         <item>Cartão</item>
         <item>Compromissos</item>
+        <item>Linhas de Ônibus</item>
     </string-array>
 
     <!--! Frases !-->
@@ -31,4 +32,8 @@
 
     <!--! Compromisso !-->
     <string name="diaDaSemana">Dia da Semana</string>
+
+    <!--! Linhas de Ônibus !-->
+    <string name="hint_numero_ponto">Insira o número do ponto...</string>
+    <string name="botao_pesquisar">Pesquisar</string>
 </resources>
