@@ -68,6 +68,8 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
     private AnexoAdapter mArquviosAdapter;
     private AnexoImagensAdapter mImagensAdapter;
 
+    private String mFotoDiretorioAtual;
+
     public OuvidoriaFragment() {
     }
 
@@ -201,8 +203,6 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
             }
         }
     }
-
-    private String mFotoDiretorioAtual;
 
     /**
      * Criar um arquivo para a imagem que sera salva apos a foto

@@ -16,7 +16,10 @@ public class OuvidoriaUtil {
      * @return bytes formato legível
      */
     public static String bytesParaFormatoLegivel(long bytes, boolean si) {
-        int unit = si ? 1000 : 1024;
+        final int valorSi = 1000;
+        final int valorBinario = 1024;
+
+        int unit = si ? valorSi : valorBinario;
         if (bytes < unit){
             return bytes + " B";
         }
