@@ -20,7 +20,7 @@ public class OuvidoriaUtil {
         final int valorBinario = 1024;
 
         int unit = si ? valorSi : valorBinario;
-        if (bytes < unit){
+        if (bytes < unit) {
             return bytes + " B";
         }
         int exp = (int) (Math.log(bytes) / Math.log(unit));

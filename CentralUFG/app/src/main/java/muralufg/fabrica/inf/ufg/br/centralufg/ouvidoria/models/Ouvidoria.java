@@ -1,6 +1,7 @@
 package muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
