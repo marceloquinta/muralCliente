@@ -73,11 +73,10 @@ import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CollectionFragments;
-import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CompromissoFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
+import muralufg.fabrica.inf.ufg.br.centralufg.gcm.GCMRegister;
 import muralufg.fabrica.inf.ufg.br.centralufg.linhasdeonibus.fragments.LinhasDeOnibusFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.view.cartao.CartoesListFragment;
-import muralufg.fabrica.inf.ufg.br.centralufg.gcm.GCMRegister;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -192,11 +191,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
-     public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
 
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
-        }else{
+        } else {
             Crouton.makeText(this, item.getTitle() + " selecionado", Style.INFO).show();
         }
 
@@ -210,10 +209,12 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    /** Swaps fragments in the main content view */
+    /**
+     * Swaps fragments in the main content view
+     */
     private void selectItem(int position) {
         // Create a new fragment and specify the planet to show based on position
-        Fragment fragment =getFragmentFromPosition(position);
+        Fragment fragment = getFragmentFromPosition(position);
         Bundle args = new Bundle();
         fragment.setArguments(args);
 
@@ -229,8 +230,8 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
-    private Fragment getFragmentFromPosition(int position){
-        switch (position){
+    private Fragment getFragmentFromPosition(int position) {
+        switch (position) {
             case 0:
                 return new HelloFragment();
 

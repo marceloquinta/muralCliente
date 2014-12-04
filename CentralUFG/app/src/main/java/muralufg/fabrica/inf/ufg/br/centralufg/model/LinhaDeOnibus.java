@@ -5,13 +5,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
 
 /**
  * Created by Laerte on 27/11/2014.
  */
 public class LinhaDeOnibus {
 
+    private static final Logger LOGGER = Logger.getLogger(LinhaDeOnibus.class.getName());
+
     private String nome;
+
     private int numero;
     private int proximo;
 
@@ -21,7 +28,7 @@ public class LinhaDeOnibus {
             this.numero = object.getInt("number");
             this.proximo = object.getInt("next");
         } catch (JSONException e) {
-            e.printStackTrace();
+            LOGGER.info(e.getMessage());
         }
     }
 
@@ -49,13 +56,13 @@ public class LinhaDeOnibus {
         this.proximo = proximo;
     }
 
-    public static ArrayList<LinhaDeOnibus> fromJson(JSONArray jsonObjects) {
-        ArrayList<LinhaDeOnibus> linhasDeOnibus = new ArrayList<LinhaDeOnibus>();
-        for (int i = 0;i < jsonObjects.length(); i++) {
+    public static List<LinhaDeOnibus> fromJson(JSONArray jsonObjects) {
+        List<LinhaDeOnibus> linhasDeOnibus = new ArrayList<LinhaDeOnibus>();
+        for (int i = 0; i < jsonObjects.length(); i++) {
             try {
                 linhasDeOnibus.add(new LinhaDeOnibus(jsonObjects.getJSONObject(i)));
             } catch (JSONException e) {
-                e.printStackTrace();
+                LOGGER.info(e.getMessage());
             }
         }
         return linhasDeOnibus;
