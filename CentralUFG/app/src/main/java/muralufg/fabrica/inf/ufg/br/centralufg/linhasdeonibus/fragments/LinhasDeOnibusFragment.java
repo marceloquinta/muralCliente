@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -44,7 +45,7 @@ public class LinhasDeOnibusFragment extends Fragment implements ServiceCompliant
             @Override
             public void onClick(View v) {
                 String numeroPonto = editTextNumeroPonto.getText().toString();
-                if (numeroPonto == null || numeroPonto.equals("")) {
+                if (numeroPonto == null || ("").equals(numeroPonto)) {
                     createInfo("Por favor, insira o número do ponto desejado.");
                 } else {
                     LinhasDeOnibusService service = new LinhasDeOnibusService(LinhasDeOnibusFragment.this, numeroPonto);
@@ -73,7 +74,7 @@ public class LinhasDeOnibusFragment extends Fragment implements ServiceCompliant
 
     @Override
     public void readObject(Object object) {
-        ArrayList<LinhaDeOnibus> linhasDeOnibus = (ArrayList<LinhaDeOnibus>) object;
+        List<LinhaDeOnibus> linhasDeOnibus = (ArrayList<LinhaDeOnibus>) object;
         LinhasDeOnibusAdapter linhaDeOnibusAdapter = new LinhasDeOnibusAdapter(getContextActivity(), linhasDeOnibus);
         ListView listView = (ListView) getView().findViewById(R.id.listViewLinhasDeOnibus);
         listView.setAdapter(linhaDeOnibusAdapter);
