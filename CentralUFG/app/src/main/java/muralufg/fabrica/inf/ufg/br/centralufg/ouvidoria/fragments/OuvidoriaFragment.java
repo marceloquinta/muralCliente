@@ -311,7 +311,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
      */
     public String getDiretorio(Uri uri) {
         String[] projection = {MediaStore.MediaColumns.DATA};
-        Cursor cursor = getActivity().managedQuery(uri, projection, null, null, null);
+        Cursor cursor = getActivity().getContentResolver().query(uri, projection, null, null, null);
         int columnIndex = cursor
                 .getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
         cursor.moveToFirst();
