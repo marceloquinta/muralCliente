@@ -22,7 +22,19 @@ import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.utils.OuvidoriaUtil;
 
 public class AnexoImagensAdapter extends ArrayAdapter<OuvidoriaItemAnexo> {
 
-    static int layout = R.layout.adapter_ouvidoria_item_image;
+    /**
+     * Altura da imagem
+     */
+    private static final int ALTURA_IMAGEM = 200;
+    /**
+     * Largura da imagem
+     */
+    private static final int LARGURA_IMAGEM = 200;
+
+    /**
+     * Layout utilizado pelo adapter
+     */
+    private static int layout = R.layout.adapter_ouvidoria_item_image;
 
     private Activity mContext;
     private List<OuvidoriaItemAnexo> mItens;
@@ -38,8 +50,8 @@ public class AnexoImagensAdapter extends ArrayAdapter<OuvidoriaItemAnexo> {
         mItens.add(item);
     }
 
-    public List<OuvidoriaItemAnexo> getAll(){
-        return  mItens;
+    public List<OuvidoriaItemAnexo> getAll() {
+        return mItens;
     }
 
     @Override
@@ -101,7 +113,7 @@ public class AnexoImagensAdapter extends ArrayAdapter<OuvidoriaItemAnexo> {
         }
 
         public void setImagem(String diretorio) {
-            Picasso.with(mContext).load(new File(Uri.decode(diretorio))).resize(200, 200).centerCrop().into(this.itemImagem);
+            Picasso.with(mContext).load(new File(Uri.decode(diretorio))).resize(LARGURA_IMAGEM, ALTURA_IMAGEM).centerCrop().into(this.itemImagem);
         }
     }
 

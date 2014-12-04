@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,10 +15,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,13 +33,17 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.adapters.AnexoAdapter;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.adapters.AnexoImagensAdapter;
+import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models.ItemException;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models.Ouvidoria;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models.OuvidoriaItemAnexo;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.services.OuvidoriaService;
+import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.utils.FormOuvidoriaValidator;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.utils.OuvidoriaUtil;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.ServiceCompliant;
 
 public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
+
+    private static final Logger LOGGER = Logger.getLogger(OuvidoriaFragment.class.getName());
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_IMAGE_GALERIA = 2;
@@ -53,9 +58,9 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
      */
     private static final long TAMANNHO_MAXIMO_ARQUIVO = 20971520;
 
-    private TextView mOuvidoriaTitulo;
-    private TextView mOuvidoriaData;
-    private TextView mOuvidoriaDescricao;
+    private EditText mOuvidoriaTitulo;
+    private EditText mOuvidoriaData;
+    private EditText mOuvidoriaDescricao;
 
     private ListView mOuvidoriaListaArquivos;
     private GridView mOuvidoriaGridImagens;
@@ -63,7 +68,20 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
     private AnexoAdapter mArquviosAdapter;
     private AnexoImagensAdapter mImagensAdapter;
 
+    private String mFotoDiretorioAtual;
+
     public OuvidoriaFragment() {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        final ArrayList<OuvidoriaItemAnexo> arquivos = new ArrayList<OuvidoriaItemAnexo>();
+        mArquviosAdapter = new AnexoAdapter(getActivity(), arquivos);
+
+        final ArrayList<OuvidoriaItemAnexo> imagens = new ArrayList<OuvidoriaItemAnexo>();
+        mImagensAdapter = new AnexoImagensAdapter(getActivity(), imagens);
     }
 
     @Override
@@ -73,24 +91,15 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
 
         View rootView = inflater.inflate(R.layout.fragment_ouvidoria, container, false);
 
-        mOuvidoriaTitulo = (TextView) rootView.findViewById(R.id.ouvidoriaTitulo);
-        mOuvidoriaData = (TextView) rootView.findViewById(R.id.ouvidoriaData);
-        mOuvidoriaDescricao = (TextView) rootView.findViewById(R.id.ouvidoriaDescricao);
+        mOuvidoriaTitulo = (EditText) rootView.findViewById(R.id.ouvidoriaTitulo);
+        mOuvidoriaData = (EditText) rootView.findViewById(R.id.ouvidoriaData);
+        mOuvidoriaDescricao = (EditText) rootView.findViewById(R.id.ouvidoriaDescricao);
         mOuvidoriaListaArquivos = (ListView) rootView.findViewById(R.id.ouvidoriaListaAnexos);
+        mOuvidoriaListaArquivos.setAdapter(mArquviosAdapter);
         mOuvidoriaGridImagens = (GridView) rootView.findViewById(R.id.ouvidoriaGridImagens);
+        mOuvidoriaGridImagens.setAdapter(mImagensAdapter);
 
         return rootView;
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        mArquviosAdapter = new AnexoAdapter(getActivity(), new ArrayList<OuvidoriaItemAnexo>());
-        mOuvidoriaListaArquivos.setAdapter(mArquviosAdapter);
-
-        mImagensAdapter = new AnexoImagensAdapter(getActivity(), new ArrayList<OuvidoriaItemAnexo>());
-        mOuvidoriaGridImagens.setAdapter(mImagensAdapter);
     }
 
     @Override
@@ -131,21 +140,29 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
      * Enviar mensagem
      */
     private void enviarMensagem() {
-        String titulo = mOuvidoriaTitulo.getText().toString();
-        String data = mOuvidoriaData.getText().toString();
-        String descricao = mOuvidoriaDescricao.getText().toString();
+        // Definir os parametros para validar o formulário
+        FormOuvidoriaValidator form = new FormOuvidoriaValidator.Builder()
+                .data(mOuvidoriaData)
+                .minimo(mOuvidoriaTitulo, 5)
+                .minimo(mOuvidoriaDescricao, 10)
+                .build();
 
-        Ouvidoria ouvidoria = new Ouvidoria(titulo, data, descricao);
+        // Enviar mensagem, se o formulário for preenchido corretamente
+        if (form.isValid()) {
+            String titulo = mOuvidoriaTitulo.getText().toString();
+            String data = mOuvidoriaData.getText().toString();
+            String descricao = mOuvidoriaDescricao.getText().toString();
 
-        // Adicionar todos os itens em anexo
-        ouvidoria.addAllItensAnexo(mArquviosAdapter.getAll());
-        ouvidoria.addAllItensAnexo(mImagensAdapter.getAll());
+            Ouvidoria ouvidoria = new Ouvidoria(titulo, data, descricao);
 
-        showMenssage("Enviando..." + ouvidoria.toString());
+            // Adicionar todos os itens em anexo
+            ouvidoria.addAllItensAnexo(mArquviosAdapter.getAll());
+            ouvidoria.addAllItensAnexo(mImagensAdapter.getAll());
 
-        // Enviar a mensagem para a ouvidoria
-        OuvidoriaService ouvidoriaService = new OuvidoriaService(this, ouvidoria);
-        ouvidoriaService.execute();
+            // Enviar a mensagem para a ouvidoria
+            OuvidoriaService ouvidoriaService = new OuvidoriaService(this, ouvidoria);
+            ouvidoriaService.execute();
+        }
     }
 
     /**
@@ -185,6 +202,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
             try {
                 photoFile = criarArquivoImagem();
             } catch (IOException ex) {
+                LOGGER.error(ex.getMessage());
                 showMenssage(ex.getMessage());
             }
             // Continuar apenas se o arquivo estiver criado
@@ -195,8 +213,6 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
             }
         }
     }
-
-    private String mFotoDiretorioAtual;
 
     /**
      * Criar um arquivo para a imagem que sera salva apos a foto
@@ -246,7 +262,8 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         try {
             final OuvidoriaItemAnexo itemAnexo = getItemAnexo(arquivo);
             addArquivo(itemAnexo);
-        } catch (Exception e) {
+        } catch (ItemException e) {
+            LOGGER.error(e.getMessage(), e);
             showMenssage(e.getMessage());
         }
     }
@@ -258,7 +275,8 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         try {
             final OuvidoriaItemAnexo itemAnexo = getItemAnexo(imagem);
             addImagem(itemAnexo);
-        } catch (Exception e) {
+        } catch (ItemException e) {
+            LOGGER.error(e.getMessage(), e);
             showMenssage(e.getMessage());
         }
     }
@@ -268,7 +286,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
      * @return
      * @throws Exception
      */
-    private OuvidoriaItemAnexo getItemAnexo(String diretorio) throws Exception {
+    private OuvidoriaItemAnexo getItemAnexo(String diretorio) throws ItemException {
 
         OuvidoriaItemAnexo itemAnexo;
 
@@ -277,7 +295,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         if (file.exists()) {
             // Verifica o tamanho máximo do arquivo para envio
             if (file.length() > TAMANNHO_MAXIMO_ARQUIVO) {
-                throw new Exception(String.format(
+                throw new ItemException(String.format(
                         getResources().getString(R.string.erro_tamanho_maximo_arquivo),
                         getTamanhoMaximo()
                 ));
@@ -289,7 +307,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
 
             return itemAnexo;
         } else {
-            throw new Exception(String.format(
+            throw new ItemException(String.format(
                     getResources().getString(R.string.erro_arquivo_nao_existe)
             ));
         }
@@ -303,11 +321,11 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
      */
     public String getDiretorio(Uri uri) {
         String[] projection = {MediaStore.MediaColumns.DATA};
-        Cursor cursor = getActivity().managedQuery(uri, projection, null, null, null);
-        int column_index = cursor
+        Cursor cursor = getActivity().getContentResolver().query(uri, projection, null, null, null);
+        int columnIndex = cursor
                 .getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
         cursor.moveToFirst();
-        return cursor.getString(column_index);
+        return cursor.getString(columnIndex);
     }
 
     /**
@@ -368,9 +386,20 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         if (object instanceof String) {
             final String mensagem = (String) object;
             Crouton.makeText(this.getActivity(), mensagem, Style.CONFIRM).show();
+            limparCamposForm();
         } else {
             Log.e(this.getClass().getName(), "A mensagem de reposta deve ser uma String");
         }
+    }
+
+    /**
+     * Limpar todos os dados inseridos nos campos do formulário
+     */
+    private void limparCamposForm() {
+        mOuvidoriaTitulo.setText("");
+        mOuvidoriaTitulo.requestFocus();
+        mOuvidoriaData.setText("");
+        mOuvidoriaDescricao.setText("");
     }
 
     /**
@@ -382,4 +411,6 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
     public Activity getContextActivity() {
         return this.getActivity();
     }
+
+
 }

@@ -3,10 +3,6 @@ package muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.services;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
-import com.github.kevinsawicki.http.HttpRequest;
-
-import org.apache.log4j.Logger;
-
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.ServiceCompliant;
 
@@ -29,8 +25,6 @@ public class OuvidoriaConnection extends AsyncTask<Void, Void, Void> {
     protected ServiceCompliant handler;
     private ProgressDialog dialog;
     private String url;
-
-    private final Logger LOGGER = Logger.getLogger(this.getClass().getName());
 
     public OuvidoriaConnection(ServiceCompliant handler, String url) {
         this.handler = handler;
