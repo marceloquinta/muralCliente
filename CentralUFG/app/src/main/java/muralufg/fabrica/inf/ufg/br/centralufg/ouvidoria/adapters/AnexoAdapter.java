@@ -41,8 +41,8 @@ public class AnexoAdapter extends ArrayAdapter<OuvidoriaItemAnexo> {
         mItens.add(item);
     }
 
-    public List<OuvidoriaItemAnexo> getAll(){
-        return  mItens;
+    public List<OuvidoriaItemAnexo> getAll() {
+        return mItens;
     }
 
     @Override
@@ -62,7 +62,6 @@ public class AnexoAdapter extends ArrayAdapter<OuvidoriaItemAnexo> {
 
         final OuvidoriaItemAnexo item = mItens.get(position);
 
-        // viewHolder.iconeAnexo.setImageResource(getBackgroundResource(item.getMedia()));
         viewHolder.setTitulo(item.getNome());
         viewHolder.removerAnexo.setOnClickListener(new View.OnClickListener() {
             @Override

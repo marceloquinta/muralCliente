@@ -21,6 +21,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -32,6 +34,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.adapters.AnexoAdapter;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.adapters.AnexoImagensAdapter;
+import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models.ItemException;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models.Ouvidoria;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.models.OuvidoriaItemAnexo;
 import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.services.OuvidoriaService;
@@ -39,6 +42,8 @@ import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.utils.OuvidoriaUtil;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.ServiceCompliant;
 
 public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
+
+    private static final Logger LOGGER = Logger.getLogger(OuvidoriaFragment.class.getName());
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_IMAGE_GALERIA = 2;
@@ -185,6 +190,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
             try {
                 photoFile = criarArquivoImagem();
             } catch (IOException ex) {
+                LOGGER.error(ex.getMessage());
                 showMenssage(ex.getMessage());
             }
             // Continuar apenas se o arquivo estiver criado
@@ -246,7 +252,8 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         try {
             final OuvidoriaItemAnexo itemAnexo = getItemAnexo(arquivo);
             addArquivo(itemAnexo);
-        } catch (Exception e) {
+        } catch (ItemException e) {
+            LOGGER.error(e.getMessage(), e);
             showMenssage(e.getMessage());
         }
     }
@@ -258,7 +265,8 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         try {
             final OuvidoriaItemAnexo itemAnexo = getItemAnexo(imagem);
             addImagem(itemAnexo);
-        } catch (Exception e) {
+        } catch (ItemException e) {
+            LOGGER.error(e.getMessage(), e);
             showMenssage(e.getMessage());
         }
     }
@@ -268,7 +276,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
      * @return
      * @throws Exception
      */
-    private OuvidoriaItemAnexo getItemAnexo(String diretorio) throws Exception {
+    private OuvidoriaItemAnexo getItemAnexo(String diretorio) throws ItemException {
 
         OuvidoriaItemAnexo itemAnexo;
 
@@ -277,7 +285,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
         if (file.exists()) {
             // Verifica o tamanho máximo do arquivo para envio
             if (file.length() > TAMANNHO_MAXIMO_ARQUIVO) {
-                throw new Exception(String.format(
+                throw new ItemException(String.format(
                         getResources().getString(R.string.erro_tamanho_maximo_arquivo),
                         getTamanhoMaximo()
                 ));
@@ -289,7 +297,7 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
 
             return itemAnexo;
         } else {
-            throw new Exception(String.format(
+            throw new ItemException(String.format(
                     getResources().getString(R.string.erro_arquivo_nao_existe)
             ));
         }
@@ -304,10 +312,10 @@ public class OuvidoriaFragment extends Fragment implements ServiceCompliant {
     public String getDiretorio(Uri uri) {
         String[] projection = {MediaStore.MediaColumns.DATA};
         Cursor cursor = getActivity().managedQuery(uri, projection, null, null, null);
-        int column_index = cursor
+        int columnIndex = cursor
                 .getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
         cursor.moveToFirst();
-        return cursor.getString(column_index);
+        return cursor.getString(columnIndex);
     }
 
     /**

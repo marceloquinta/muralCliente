@@ -23,7 +23,7 @@ public class OuvidoriaService extends OuvidoriaConnection {
      */
     private static final String URL = "http://private-385b-centralufgouvidoria.apiary-mock.com/ouvidoria";
 
-    private final Logger LOGGER = Logger.getLogger(this.getClass().getName());
+    private static final Logger LOGGER = Logger.getLogger(OuvidoriaService.class.getName());
 
     private Ouvidoria ouvidoria;
 
