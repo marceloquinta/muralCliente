@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="15dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/prato_imagem"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/pamonha"
+            android:baselineAligned="false"
+            android:clickable="true"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/info_prato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#80FFFFFF"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/prato_nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="Pamonha"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/prato_preco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="R$ 2,15"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
