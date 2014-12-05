@@ -26,4 +26,4 @@ crashlytics-build.properties
 .DS_Store
 
 # Gradle
-
+.gradle/
