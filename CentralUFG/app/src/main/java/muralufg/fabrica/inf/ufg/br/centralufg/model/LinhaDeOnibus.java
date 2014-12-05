@@ -28,7 +28,7 @@ public class LinhaDeOnibus {
             this.numero = object.getInt("number");
             this.proximo = object.getInt("next");
         } catch (JSONException e) {
-            LOGGER.info(e.getMessage());
+            LOGGER.info(e.getMessage(), e);
         }
     }
 
@@ -62,7 +62,7 @@ public class LinhaDeOnibus {
             try {
                 linhasDeOnibus.add(new LinhaDeOnibus(jsonObjects.getJSONObject(i)));
             } catch (JSONException e) {
-                LOGGER.info(e.getMessage());
+                LOGGER.info(e.getMessage(), e);
             }
         }
         return linhasDeOnibus;
