@@ -131,10 +131,15 @@ public class MainActivity extends ActionBarActivity {
         "close drawer" description
         */
         mDrawerToggle = new ActionBarDrawerToggle(
+                /* host Activity */
                 this,
+                /* DrawerLayout object */
                 mDrawerLayout,
+                /* nav drawer icon to replace 'Up' caret */
                 R.drawable.ic_drawer,
+                /* "open drawer" description */
                 R.string.label_menu,
+                /* "close drawer" description */
                 R.string.label_fechar
         ) {
 
