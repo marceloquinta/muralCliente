@@ -72,6 +72,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
+import muralufg.fabrica.inf.ufg.br.centralufg.cardapio.fragments.PratosFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CollectionFragments;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CompromissoFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
@@ -241,6 +242,9 @@ public class MainActivity extends ActionBarActivity {
 
             case 3:
                 return new CollectionFragments();
+
+            case 4:
+                return PratosFragment.newInstance();
 
             default:
                 Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida),
