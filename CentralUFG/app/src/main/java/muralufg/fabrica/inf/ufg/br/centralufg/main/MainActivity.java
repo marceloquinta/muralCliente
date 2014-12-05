@@ -75,6 +75,7 @@ import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CollectionFragments;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CompromissoFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
+import muralufg.fabrica.inf.ufg.br.centralufg.ouvidoria.fragments.OuvidoriaFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.view.cartao.CartoesListFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.gcm.GCMRegister;
 
@@ -241,6 +242,9 @@ public class MainActivity extends ActionBarActivity {
 
             case 3:
                 return new CollectionFragments();
+
+            case 4:
+                return new OuvidoriaFragment();
 
             default:
                 Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida),
