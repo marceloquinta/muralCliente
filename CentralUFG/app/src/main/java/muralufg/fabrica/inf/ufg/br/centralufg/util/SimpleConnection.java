@@ -2,8 +2,11 @@ package muralufg.fabrica.inf.ufg.br.centralufg.util;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.github.kevinsawicki.http.HttpRequest;
+
+import org.apache.log4j.Logger;
 
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 
@@ -16,6 +19,7 @@ public class SimpleConnection extends AsyncTask<Void, Void, Void> {
     protected ServiceCompliant handler;
     private ProgressDialog dialog;
     private String url;
+    private static final Logger LOGGER = Logger.getLogger("SimpleConnection");
 
     public SimpleConnection(ServiceCompliant handler, String url){
         this.handler = handler;
@@ -29,8 +33,9 @@ public class SimpleConnection extends AsyncTask<Void, Void, Void> {
             HttpRequest request = HttpRequest.get(url);
             httpStatus = request.code();
             response = request.body();
-        }catch (RuntimeException  e){
-            throw e;
+        } catch (Exception e){
+            LOGGER.info("Erro ao realizar requisicao: " + e.getMessage(), e);
+            return null;
         }
         return null;
     }

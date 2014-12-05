@@ -13,6 +13,9 @@
         <item>Home</item>
         <item>Frase do dia</item>
         <item>Cartão</item>
+        <item>Compromissos</item>
+        <item>Linhas de Ônibus</item>
+        <item>Locais</item>
     </string-array>
 
     <!--! Frases !-->
@@ -24,4 +27,14 @@
     <string name="alerta_no_content">Nenhuma informação para ser visualizada</string>
     <string name="menssage">Abrindo...</string>
 
+    <string name="gcm_app_version">appVersion</string>
+    <string name="gcm_sender_id">437002960869</string>
+    <string name="property_reg_id">registration_id</string>
+
+    <!--! Compromisso !-->
+    <string name="diaDaSemana">Dia da Semana</string>
+
+    <!--! Linhas de Ônibus !-->
+    <string name="hint_numero_ponto">Insira o número do ponto...</string>
+    <string name="botao_pesquisar">Pesquisar</string>
 </resources>
