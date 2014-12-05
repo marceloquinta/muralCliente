@@ -85,6 +85,18 @@ public class Local implements Parcelable {
         this.localizacaoGeografica = localizacaoGeografica;
     }
 
+    public static final Creator<Local> CREATOR = new Creator<Local>(){
+        @Override
+        public Local createFromParcel(Parcel parcel) {
+            return new Local(parcel);
+        }
+
+        @Override
+        public Local[] newArray(int i) {
+            return new Local[i];
+        }
+    };
+
     public int getId() {
         return id;
     }
@@ -146,16 +158,4 @@ public class Local implements Parcelable {
         parcel.writeString(localizacaoGeografica);
         parcel.writeString(imagem);
     }
-
-    public static final Creator<Local> CREATOR = new Creator<Local>(){
-        @Override
-        public Local createFromParcel(Parcel parcel) {
-            return new Local(parcel);
-        }
-
-        @Override
-        public Local[] newArray(int i) {
-            return new Local[i];
-        }
-    };
 }

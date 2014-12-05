@@ -8,10 +8,10 @@ import android.support.v4.util.LruCache;
 public class LruBitmapCache extends LruCache<String, Bitmap> implements
         ImageCache {
     public static int getDefaultLruCacheSize() {
-        final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
-        final int cacheSize = maxMemory / 8;
-
-        return cacheSize;
+        int divisorMaxMemory = 1024;
+        int divisorCacheSize = 8;
+        final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / divisorMaxMemory);
+        return maxMemory / divisorCacheSize;
     }
 
     public LruBitmapCache() {
