@@ -7,11 +7,12 @@
     <ImageView
         android:id="@+id/ouvidoria_item_image"
         android:layout_width="fill_parent"
-        android:padding="2dp"
         android:layout_height="150dip"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:contentDescription="@string/desc_imagem_anexada"
+        android:padding="2dp"
         android:scaleType="centerCrop" />
 
     <LinearLayout
@@ -23,12 +24,12 @@
         android:layout_alignLeft="@+id/ouvidoria_item_image"
         android:layout_alignRight="@+id/ouvidoria_item_image"
         android:layout_alignStart="@+id/ouvidoria_item_image"
-        android:background="#70000000"
+        android:background="@color/descricao_imagem"
         android:orientation="horizontal"
         android:weightSum="1">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="8dp"
             android:layout_weight="1"
@@ -40,7 +41,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text="Nome"
                 android:textColor="@android:color/white" />
 
             <TextView
@@ -48,7 +48,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:text="Tamanho"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@android:color/white" />
         </LinearLayout>
@@ -57,6 +56,7 @@
             android:id="@+id/ouvidoria_item_remover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/desc_remover_imagem"
             android:src="@drawable/ic_action_remover" />
 
     </LinearLayout>

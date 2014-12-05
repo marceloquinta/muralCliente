@@ -12,6 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:contentDescription="@string/action_anexar_arquivo"
         android:src="@drawable/ic_action_arquivo" />
 
     <TextView
@@ -33,9 +34,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:contentDescription="@string/desc_remover_arquivo"
         android:src="@drawable/ic_action_remover" />
 
 </RelativeLayout>
-
-
-

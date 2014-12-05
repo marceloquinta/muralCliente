@@ -46,4 +46,8 @@
     <string name="excluir_anexo">x</string>
     <string name="erro_tamanho_maximo_arquivo">Não é possível anexar um arquivo com mais de %s</string>
     <string name="erro_arquivo_nao_existe">Arquivo não existe</string>
+    <string name="desc_imagem_anexada">Imagem anexada</string>
+    <string name="desc_remover_imagem">Remover imagem anexada</string>
+    <string name="desc_arquivo_anexado">Arquivo anexado</string>
+    <string name="desc_remover_arquivo">Remover arquivo anexado</string>
 </resources>
