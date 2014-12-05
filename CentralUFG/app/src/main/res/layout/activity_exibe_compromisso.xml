@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.ExibeCompromisso">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/data"
+        android:id="@+id/labelData"
+        android:textStyle="bold"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/textViewNome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/gplus_color_6"
+        android:textColor="@color/gplus_color_12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sample_date"
+        android:id="@+id/textViewData"
+        android:layout_toEndOf="@+id/labelData"
+        android:layout_toRightOf="@+id/labelData"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/labelData"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/nome"
+        android:id="@+id/labelNome"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/gplus_color_6"
+        android:textColor="@color/gplus_color_12" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sample"
+        android:id="@+id/textViewNome"
+        android:layout_below="@+id/labelNome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:maxLines = "3"
+        android:scrollbars = "vertical"
+        android:fadeScrollbars="false"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/descricao"
+        android:id="@+id/labelDescricao"
+        android:textStyle="bold"
+        android:layout_below="@+id/textViewData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:background="@color/gplus_color_6"
+        android:textColor="@color/gplus_color_12"
+        android:layout_toStartOf="@+id/buttonSalvarNaAgenda"
+        android:layout_toLeftOf="@+id/buttonSalvarNaAgenda"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sample"
+        android:id="@+id/textViewDescricao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelDescricao" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salvar_na_agenda"
+        android:id="@+id/buttonSalvarNaAgenda"
+        android:layout_below="@+id/labelData"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:onClick="salvarCompromissoNaAgenda"/>
+
+</RelativeLayout>

@@ -49,27 +49,53 @@
  * do Instituto de Informática (UFG). Consulte <http://fs.inf.ufg.br>
  * para detalhes.
  */
+
 package muralufg.fabrica.inf.ufg.br.centralufg.model;
 
-import java.util.Calendar;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-import muralufg.fabrica.inf.ufg.br.centralufg.util.CalendarFormatter;
+public class Local implements Parcelable {
 
-public class Compromisso {
     private int id;
     private String nome;
-    private String descricao;
-    private Calendar data;
+    private String endereco;
+    private String telefone;
+    private String localizacaoGeografica;
+    private String imagem;
 
-    public Compromisso() {
+    public Local() {
+
     }
 
-    public Compromisso(int id, String nome, String descricao, String data) {
+    public Local (Parcel parcel){
+        this.nome = parcel.readString();
+        this.endereco = parcel.readString();
+        this.telefone = parcel.readString();
+        this.localizacaoGeografica = parcel.readString();
+        this.imagem = parcel.readString();
+    }
+
+    public Local(int id, String nome, String imagem, String endereco, String telefone, String localizacaoGeografica) {
         this.id = id;
         this.nome = nome;
-        this.descricao = descricao;
-        setStringData(data);
+        this.imagem = imagem;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.localizacaoGeografica = localizacaoGeografica;
     }
+
+    public static final Creator<Local> CREATOR = new Creator<Local>(){
+        @Override
+        public Local createFromParcel(Parcel parcel) {
+            return new Local(parcel);
+        }
+
+        @Override
+        public Local[] newArray(int i) {
+            return new Local[i];
+        }
+    };
 
     public int getId() {
         return id;
@@ -87,32 +113,49 @@ public class Compromisso {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public Calendar getData() {
-        return data;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setDate(Calendar data) {
-        this.data = data;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
-    public String getStringData(){
-        return  CalendarFormatter.calendarToString(data);
+    public String getLocalizacaoGeografica() {
+        return localizacaoGeografica;
     }
 
-    public void setStringData(String data){
-        this.data = CalendarFormatter.stringToCalendar(data);
+    public void setLocalizacaoGeografica(String localizacaoGeografica) {
+        this.localizacaoGeografica = localizacaoGeografica;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     @Override
-    public String toString() {
-        return nome;
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(nome);
+        parcel.writeString(telefone);
+        parcel.writeString(endereco);
+        parcel.writeString(localizacaoGeografica);
+        parcel.writeString(imagem);
     }
 }

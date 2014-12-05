@@ -14,6 +14,8 @@
         <item>Frase do dia</item>
         <item>Cartão</item>
         <item>Compromissos</item>
+        <item>Linhas de Ônibus</item>
+        <item>Locais</item>
     </string-array>
 
     <!--! Frases !-->
@@ -29,6 +31,19 @@
     <string name="gcm_sender_id">437002960869</string>
     <string name="property_reg_id">registration_id</string>
 
-    <!--! Compromisso !-->
-    <string name="diaDaSemana">Dia da Semana</string>
+    <!-- ! Compromisso ! -->
+    <string name="dia_da_semana">Dia da Semana</string>
+    <string name="data">Data</string>
+    <string name="nome">Nome</string>
+    <string name="descricao">Descrição</string>
+    <string name="salvar_na_agenda">Salvar na Agenda</string>
+    <string name="sample">sample text</string>
+    <string name="sample_date">dd/mm/aaaa</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_exibe_compromisso">Compromisso</string>
+
+    <!--! Linhas de Ônibus !-->
+    <string name="hint_numero_ponto">Insira o número do ponto...</string>
+    <string name="botao_pesquisar">Pesquisar</string>
+
 </resources>
