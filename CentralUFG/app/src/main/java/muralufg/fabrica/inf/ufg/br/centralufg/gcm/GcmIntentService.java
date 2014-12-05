@@ -25,11 +25,11 @@ public class GcmIntentService extends IntentService {
         String messageType = gcm.getMessageType(intent);
         if (!extras.isEmpty()) {
             if (GoogleCloudMessaging.MESSAGE_TYPE_SEND_ERROR.equals(messageType)) {
-                sendNotification(extras.toString().substring(17,extras.toString().indexOf(",")));
+                sendNotification(extras.toString().substring(18,extras.toString().indexOf(",")));
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_DELETED.equals(messageType)) {
-                sendNotification(extras.toString().substring(17,extras.toString().indexOf(",")));
+                sendNotification(extras.toString().substring(18,extras.toString().indexOf(",")));
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE.equals(messageType)) {
-                sendNotification(extras.toString().substring(17,extras.toString().indexOf(",")));
+                sendNotification(extras.toString().substring(18,extras.toString().indexOf(",")));
             }
         }
         GcmBroadcastReceiver.completeWakefulIntent(intent);
