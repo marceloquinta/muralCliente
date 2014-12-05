@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="muralufg.fabrica.inf.ufg.br.centralufg" >
 
-    <uses-sdk android:minSdkVersion="14" />
+    <uses-sdk tools:node="replace" />
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -62,6 +63,10 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".compromisso.fragments.ExibeCompromisso"
+            android:label="@string/title_activity_exibe_compromisso" >
         </activity>
 
     </application>
