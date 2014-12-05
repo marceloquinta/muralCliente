@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="8dp" >
+
+    <!-- Imagem do Local -->
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imgLocais"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp" />
+
+    <!-- Nome do Local -->
+    <TextView
+        android:id="@+id/tvLocaisNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgLocais"
+        android:layout_toRightOf="@+id/imgLocais"
+        android:textSize="@dimen/local_nome"
+        android:textStyle="bold" />
+
+    <!-- Endereço do Local -->
+    <TextView
+        android:id="@+id/tvLocaisEndereco"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLocaisNome"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/imgLocais"
+        android:textSize="@dimen/endereco" />
+
+
+    <!-- Telefone do Local -->
+    <TextView
+        android:id="@+id/tvLocaisTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/telefone"
+        android:textSize="@dimen/telefone" />
+
+</RelativeLayout>
