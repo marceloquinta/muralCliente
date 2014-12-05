@@ -113,6 +113,6 @@ public class Compromisso {
 
     @Override
     public String toString() {
-        return nome + "    " + getStringData();
+        return nome;
     }
 }
