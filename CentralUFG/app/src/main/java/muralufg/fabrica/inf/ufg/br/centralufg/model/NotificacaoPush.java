@@ -13,23 +13,23 @@ import muralufg.fabrica.inf.ufg.br.centralufg.util.view.cartao.DetalheActivity;
 
 public class NotificacaoPush {
 
-    private int notificationId = 1;
+    private int notificationId = 0;
+    private int numMessage = 0;
 
     public void mostraNotificacao(String msg, Context context) {
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(context)
                         .setSmallIcon(R.drawable.ic_launcher)
                         .setContentTitle("Nova Mensagem")
-                        .setNumber(notificationId++)
-                        .setContentText((notificationId) + " mensagem(s) recebida(s)");
+                        .setContentText(msg);
         Intent resultIntent = new Intent(context, DetalheActivity.class);
         resultIntent.putExtra("mensagem_recebida", msg);
-        resultIntent.putExtra("qtde_msgs", notificationId);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addParentStack(DetalheActivity.class);
         stackBuilder.addNextIntent(resultIntent);
         PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
         mBuilder.setContentIntent(resultPendingIntent);
+        mBuilder.setNumber(++numMessage);
         Notification notification = mBuilder.build();
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
         notification.number = notificationId;
