@@ -2,4 +2,9 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <!-- List Item Locais -->
+    <dimen name="local_nome">17dp</dimen>
+    <dimen name="endereco">15dip</dimen>
+    <dimen name="telefone">12dip</dimen>
 </resources>
