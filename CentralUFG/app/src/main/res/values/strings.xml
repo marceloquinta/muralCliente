@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--! Labels !-->
+    <!-- ! Labels ! -->
     <string name="app_name">CentralUFG</string>
     <string name="label_menu">Menu</string>
     <string name="label_fechar">Fechar</string>
     <string name="label_aguarde">Aguarde</string>
 
-    <!--! Array de opcoes !-->
-    <string-array
-        name="opcoes_menu">
+    <!-- ! Array de opcoes ! -->
+    <string-array name="opcoes_menu">
         <item>Home</item>
         <item>Frase do dia</item>
         <item>Cartão</item>
         <item>Compromissos</item>
+        <item>Estágios</item>
     </string-array>
 
-    <!--! Frases !-->
+    <!-- ! Frases ! -->
     <string name="hello_world">Esta é a view inicial. Aqui ficarão os itens do mural.\n Escolha uma
     das opções da barra lateral para navegar nas opções.</string>
     <string name="action_settings">Menu de exemplo</string>
@@ -24,11 +24,13 @@
     <string name="alerta_server_error">Não foi possível conectar-se ao servidor</string>
     <string name="alerta_no_content">Nenhuma informação para ser visualizada</string>
     <string name="menssage">Abrindo...</string>
-
     <string name="gcm_app_version">appVersion</string>
     <string name="gcm_sender_id">437002960869</string>
     <string name="property_reg_id">registration_id</string>
 
-    <!--! Compromisso !-->
+    <!-- ! Compromisso ! -->
     <string name="diaDaSemana">Dia da Semana</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_estagio">EstagioActivity</string>
+
 </resources>
