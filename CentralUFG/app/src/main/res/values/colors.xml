@@ -42,6 +42,9 @@
     <color name="gplus_color_18">#FFA000</color>
     <color name="gplus_color_19">#FF8F00</color>
     <color name="gplus_color_20">#FF6F00</color>
+
+    <!-- Ouvidoria -->
+    <color name="descricao_imagem">#70000000</color>
 </resources>
 
 

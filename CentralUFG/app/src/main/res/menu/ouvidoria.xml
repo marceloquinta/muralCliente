@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_camera"
+        android:icon="@drawable/ic_action_camera"
+        android:orderInCategory="100"
+        android:title="@string/action_anexar_camera"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_action_anexar"
+        android:orderInCategory="100"
+        android:title="@string/action_anexar"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/action_anexar_imagem"
+                android:orderInCategory="100"
+                android:title="@string/action_anexar_imagem"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/action_anexar_arquivo"
+                android:orderInCategory="100"
+                android:title="@string/action_anexar_arquivo"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_enviar"
+        android:icon="@drawable/ic_action_enviar"
+        android:orderInCategory="100"
+        android:title="@string/action_enviar"
+        app:showAsAction="always"/>
+</menu>
