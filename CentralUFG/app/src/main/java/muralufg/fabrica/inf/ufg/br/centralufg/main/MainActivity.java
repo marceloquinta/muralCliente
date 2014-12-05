@@ -233,20 +233,16 @@ public class MainActivity extends ActionBarActivity {
         switch (position){
             case 0:
                 return new HelloFragment();
-
             case 1:
                 return new FraseDoDiaFragment();
-
             case 2:
                 return new CartoesListFragment();
-
             case 3:
                 return new CollectionFragments();
             case 4:
                 return new LocaisFragment();
             default:
-                Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida),
-                        Style.ALERT).show();
+                Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida), Style.ALERT).show();
                 return new HelloFragment();
         }
     }
