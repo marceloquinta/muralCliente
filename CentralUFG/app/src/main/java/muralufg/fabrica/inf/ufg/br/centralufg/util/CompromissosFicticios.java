@@ -66,22 +66,29 @@ public class CompromissosFicticios {
     private CompromissosFicticios(){
     }
 
-	public static void criaCompromissosFicticios(Context context) {
+    public static void criaCompromissosFicticios(Context context) {
 
         Compromisso compromisso1 = new Compromisso(1, "Prova de TACS",
-                "A prova de Técnicas avançadas de construção de software será na sala" +
+                "A prova de Técnicas avançadas de construção de software será na sala " +
                         "106, no centro de aulas A.", "17/10/2014");
         Compromisso compromisso2 = new Compromisso(2, "Verificar notas da prova TACS",
-                "As notas da prova de Técnicas avançadas de construção de software já estão" +
+                "As notas da prova de Técnicas avançadas de construção de software já estão " +
                         "disponíveis no Moodle para consulta.", "21/10/2014");
         Compromisso compromisso3 = new Compromisso(3, "Lembrete de aula",
-                "Lembrete que haverá aula normalmente hoje de Prática em Engenharia" +
+                "Lembrete que haverá aula normalmente hoje de Prática em Engenharia " +
                         "de software.", "21/10/2014");
         Compromisso compromisso4 = new Compromisso(4, "Não haverá aula",
-                "Lembrete que não haverá aula de Técnicas avançadas de construção de software" +
+                "Lembrete que não haverá aula de Técnicas avançadas de construção de software " +
                         "no dia 24 de outubro de 2014.", "24/10/2014");
+        Compromisso compromisso5 = new Compromisso(5, "Entrega dos resultados de Técnicas " +
+                "avançadas de construção de software",  "Pessoal, hoje será a entrega e " +
+                "avaliação final dos projetos da Técnicas avançadas de construção de " +
+                "software. Também entregarei as provas de vocês.", "24/10/2014");
+        Compromisso compromisso6 = new Compromisso(6, "Fábrica de Software",
+                "A entrega do pacote de prática em engenharia de software será hoje. " +
+                        "O professor estará aceitando os pacotes até as 23h59.", "21/10/2014");
 
-		CompromissoDAO compromissoDAO = CompromissoDAO.getInstance(context);
+        CompromissoDAO compromissoDAO = CompromissoDAO.getInstance(context);
 
         compromissoDAO.deletarTodosCompromissos();
 
@@ -89,6 +96,8 @@ public class CompromissosFicticios {
         compromissoDAO.salvar(compromisso2);
         compromissoDAO.salvar(compromisso3);
         compromissoDAO.salvar(compromisso4);
-	}
+        compromissoDAO.salvar(compromisso5);
+        compromissoDAO.salvar(compromisso6);
+    }
 
 }
