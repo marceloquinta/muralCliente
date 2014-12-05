@@ -53,7 +53,6 @@ public class DetalheLocalFragment extends Fragment {
         fragmentTransaction.replace(R.id.flContainer, mapaFragment);
         fragmentTransaction.commit();
 
-        //mapaFragment.adicionarMarcador(ponto);
 
         if (imageLoader == null) {
             imageLoader = AppController.getInstance().getImageLoader();

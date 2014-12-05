@@ -1,5 +1,6 @@
 package muralufg.fabrica.inf.ufg.br.centralufg.locais.services;
 
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +16,8 @@ import muralufg.fabrica.inf.ufg.br.centralufg.util.SimpleConnection;
 public class LocaisService extends SimpleConnection {
 
     private static final String URL = "http://private-82161-muralcliente1.apiary-mock.com/locais";
+
+    private static final Logger LOGGER = Logger.getLogger(LocaisService.class.getName());
 
     public LocaisService(ServiceCompliant handler) {
         super(handler,URL);
@@ -65,6 +68,7 @@ public class LocaisService extends SimpleConnection {
 
             handler.readObject(listaDeLocais);
         } catch (JSONException e) {
+            LOGGER.error("Erro no JSON", e);
             handler.handleError("Ocorreu um erro com "+ getResponse() + ": " + e.getLocalizedMessage());
         }
     }
