@@ -35,12 +35,7 @@ public class LinhasDeOnibusService extends SimpleConnection {
         super.onPostExecute(result);
         switch (getHttpStatus()) {
             case OK:
-                try {
-                    getJsonResponse();
-                } catch (JSONException e) {
-                    handler.handleError("Ocorreu um erro com " + getResponse() + ": " + e.getLocalizedMessage());
-                    LOGGER.info(e.getMessage());
-                }
+                getJsonResponse();
                 break;
             case ERROR:
                 handler.handleError("Ocorreu um erro");
@@ -54,20 +49,25 @@ public class LinhasDeOnibusService extends SimpleConnection {
 
     }
 
-    private void getJsonResponse() throws JSONException {
-        JSONObject jsonResponse = new JSONObject(getResponse());
-        if (jsonResponse.has("error") && jsonResponse.getBoolean("error")) {
-            if (jsonResponse.has("exist") && !jsonResponse.getBoolean("exist")) {
-                handler.handleError("Ponto " + param + " possívelmente não existe.");
-            }
-        } else {
-            if (jsonResponse.isNull("bus-lines")) {
-                handler.handleError("Não há linhas disponíveis no momento para o ponto " + param + ", tente novamente mais tarde.");
+    private void getJsonResponse() {
+        try {
+            JSONObject jsonResponse = new JSONObject(getResponse());
+            if (jsonResponse.has("error") && jsonResponse.getBoolean("error")) {
+                if (jsonResponse.has("exist") && !jsonResponse.getBoolean("exist")) {
+                    handler.handleError("Ponto " + param + " possívelmente não existe.");
+                }
             } else {
-                JSONArray linhasDeOnibusJson = jsonResponse.getJSONArray("bus-lines");
-                List<LinhaDeOnibus> linhasDeOnibus = LinhaDeOnibus.fromJson(linhasDeOnibusJson);
-                handler.readObject(linhasDeOnibus);
+                if (jsonResponse.isNull("bus-lines")) {
+                    handler.handleError("Não há linhas disponíveis no momento para o ponto " + param + ", tente novamente mais tarde.");
+                } else {
+                    JSONArray linhasDeOnibusJson = jsonResponse.getJSONArray("bus-lines");
+                    List<LinhaDeOnibus> linhasDeOnibus = LinhaDeOnibus.fromJson(linhasDeOnibusJson);
+                    handler.readObject(linhasDeOnibus);
+                }
             }
+        } catch (JSONException e) {
+            handler.handleError("Ocorreu um erro com " + getResponse() + ": " + e.getLocalizedMessage());
+            LOGGER.info(e.getMessage(), e);
         }
     }
 }
