@@ -2,82 +2,82 @@
 <pre-dex-items>
 
     <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-a43a144f15629433b98bd0ee19b308a59b7e4b74.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library\0.5.2\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="00c945daa09c5775dcb0c61f19cee94b7916a28d"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-6f04054d80f3c6bfca3e6806f7074e59f6dcf50f.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.2\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\android-logging-log4j-1.0.2-8e145ef05ee0da13b6fb36b69922842ada3ba98f.jar"
-        jar="C:\Users\Murilo\.gradle\caches\modules-2\files-2.1\de.mindpipe.android\android-logging-log4j\1.0.2\7c7ee63dabb2fa6436f652dde5a79d060ef8674b\android-logging-log4j-1.0.2.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="7c7ee63dabb2fa6436f652dde5a79d060ef8674b"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-0d5c80fce87803319b5678133baf6e1b45976c56.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\http-request-5.6-8c01f250edc8f114db20d4228cbb78069e91dd89.jar"
-        jar="C:\Users\Murilo\.gradle\caches\modules-2\files-2.1\com.github.kevinsawicki\http-request\5.6\168305b7a983142b6311a005f0ad96d3b34d92d\http-request-5.6.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="0168305b7a983142b6311a005f0ad96d3b34d92d"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-a9f7a8d6e762e16be9458b6e90cfe921eac17919.jar"
-        jar="C:\Users\Murilo\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\library-1.0.6-ee3a0324f72e37fc798076b9fc9505e687c69fb9.jar"
-        jar="C:\Users\Murilo\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.6\b2e6988baeea1aed656995f973aaa2fc3feaf447\library-1.0.6.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="b2e6988baeea1aed656995f973aaa2fc3feaf447"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-90ed548b090358fd7771e641ed99c3c794095aa1.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-a7714c0e3a3b681ed4c1101a62293d3ddaba0772.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.2\classes.jar"
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-b7656cf98389dc4b1540850d43aa32c56846958e.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.2\classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="b017100da14f9c158c9f5f2f508333c224b24a7c"/>
     <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-442c0fd1c4a4dadb0f3af22ea8413911b5cf73e2.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\de.keyboardsurfer.android.widget\crouton\1.8.4\classes.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="ef6e7d100ebc7feca53c3e2445b8e63ce4dea90c"/>
-    <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-702df52f9f41a7b8e0cf6eecee7dc47d079e78d8.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-ca36e8d59756c2fba91f83e08dd176eec8e11437.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.1.71\classes.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da"/>
     <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\log4j-1.2.17-45041e6726219610b68e453f22e20c8341150bcd.jar"
-        jar="C:\Users\Murilo\.gradle\caches\modules-2\files-2.1\log4j\log4j\1.2.17\5af35056b4d257e4b64b9e8069c0746e8b08629f\log4j-1.2.17.jar"
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\library-1.0.6-96ce26f1a4cde6c29fcf46bf65cca6486435461f.jar"
+        jar="C:\Users\AIRES\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.6\b2e6988baeea1aed656995f973aaa2fc3feaf447\library-1.0.6.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="5af35056b4d257e4b64b9e8069c0746e8b08629f"/>
+        sha1="b2e6988baeea1aed656995f973aaa2fc3feaf447"/>
     <item
-        dex="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-37124cba757a69162dd84d2b382e6a9c4df70a0b.jar"
-        jar="C:\Users\Murilo\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-127484bf6a972e9be80f1629e997ec693cbad9a8.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\de.keyboardsurfer.android.widget\crouton\1.8.4\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ef6e7d100ebc7feca53c3e2445b8e63ce4dea90c"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-629f3037539380c125e0f1eb3e82879195abc0bc.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-85c63200679f54b4218e62f24649421b62475704.jar"
+        jar="C:\Program Files\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-26db65b119f006d7756a9ba8c58c2f9cf1b607ea.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\http-request-5.6-e463a47d61e3eac1276f9b9238c6711f73b97012.jar"
+        jar="C:\Users\AIRES\.gradle\caches\modules-2\files-2.1\com.github.kevinsawicki\http-request\5.6\168305b7a983142b6311a005f0ad96d3b34d92d\http-request-5.6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0168305b7a983142b6311a005f0ad96d3b34d92d"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-23dff8fbe26c2d5a0282a65ef6f0c88348b87f98.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.github.castorflex.smoothprogressbar\library\0.5.2\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="00c945daa09c5775dcb0c61f19cee94b7916a28d"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\android-logging-log4j-1.0.2-69fbb3d6c216b74009aa2ed48f5d21289309e05b.jar"
+        jar="C:\Users\AIRES\.gradle\caches\modules-2\files-2.1\de.mindpipe.android\android-logging-log4j\1.0.2\7c7ee63dabb2fa6436f652dde5a79d060ef8674b\android-logging-log4j-1.0.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7c7ee63dabb2fa6436f652dde5a79d060ef8674b"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-c8d27d3f7d8cd1cfd8535d70e53458fd80509cff.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\classes-025b07ed7fcac3c0efb6015244f0b6ebb39729c0.jar"
+        jar="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3"/>
+    <item
+        dex="C:\Users\AIRES\Desktop\muralCliente\CentralUFG\app\build\intermediates\pre-dexed\debug\log4j-1.2.17-98391cde418d5951f26c07614d0d5f97c2b2a775.jar"
+        jar="C:\Users\AIRES\.gradle\caches\modules-2\files-2.1\log4j\log4j\1.2.17\5af35056b4d257e4b64b9e8069c0746e8b08629f\log4j-1.2.17.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5af35056b4d257e4b64b9e8069c0746e8b08629f"/>
 
 </pre-dex-items>

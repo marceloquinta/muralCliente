@@ -37,6 +37,7 @@ public class AdapterPratos extends ArrayAdapter <Prato>
         return super.getCount();
     }
 
+
     public AdapterPratos(Context context, List<Prato> pratos) {
         super(context, layout);
         mContext = context;
@@ -64,5 +65,10 @@ public class AdapterPratos extends ArrayAdapter <Prato>
         holder.imagemPrato.setBackgroundResource(prato.getImage());
 
         return listItemView;
+    }
+
+    @Override
+    public Prato getItem(int position) {
+        return super.getItem(position);
     }
 }
