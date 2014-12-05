@@ -43,10 +43,13 @@ public class DetalheLocalFragment extends Fragment {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
+        Double latitude = -16.6032416;
+        Double longitude = -49.2657075;
+
         Ponto ponto = new Ponto();
         ponto.setDescricao(local.getNome());
-        ponto.setLatitude(-16.6032416);
-        ponto.setLongitude(-49.2657075);
+        ponto.setLatitude(latitude);
+        ponto.setLongitude(longitude);
 
         MapaFragment mapaFragment = new MapaFragment();
 

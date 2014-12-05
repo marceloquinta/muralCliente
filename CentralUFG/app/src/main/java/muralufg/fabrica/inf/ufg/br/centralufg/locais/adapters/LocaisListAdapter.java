@@ -22,11 +22,6 @@ public class LocaisListAdapter extends ArrayAdapter<Local> {
     private Context context;
     private List<Local> listaDeLocais;
 
-    @Override
-    public Local getItem(int position) {
-        return super.getItem(position);
-    }
-
     public LocaisListAdapter(Context context, List<Local> listaDeLocais) {
         super(context, android.R.layout.simple_list_item_1, listaDeLocais);
         this.listaDeLocais = listaDeLocais;
