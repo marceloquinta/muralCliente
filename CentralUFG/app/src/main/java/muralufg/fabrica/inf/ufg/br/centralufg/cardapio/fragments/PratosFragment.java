@@ -4,6 +4,7 @@ package muralufg.fabrica.inf.ufg.br.centralufg.cardapio.fragments;
  * Created by AIRES on 04/12/2014.
  */
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -23,6 +24,7 @@ import java.util.List;
 
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.cardapio.adapter.AdapterPratos;
+import muralufg.fabrica.inf.ufg.br.centralufg.main.MainActivity;
 import muralufg.fabrica.inf.ufg.br.centralufg.model.Prato;
 
 
@@ -37,6 +39,7 @@ public class PratosFragment extends Fragment implements AbsListView.OnItemClickL
         return fragment;
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,8 +48,7 @@ public class PratosFragment extends Fragment implements AbsListView.OnItemClickL
         // Set the adapter
         mListView = (ListView) view.findViewById(R.id.lista_de_pratos);
 
-        // Set OnItemClickListener so we can be notified on item clicks
-        mListView.setOnItemClickListener(this);
+
 
         return view;
     }
@@ -74,6 +76,8 @@ public class PratosFragment extends Fragment implements AbsListView.OnItemClickL
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Prato pratoSelecionado =  (Prato) parent.getItemAtPosition(position);
+        DescricaoPratoFragment.newInstance().setPrato(pratoSelecionado);
 
     }
 

@@ -62,8 +62,6 @@ public class AdapterPratos extends ArrayAdapter <Prato>
         holder.txtNomePrato.setText(prato.getNome());
         holder.txtPrecoPrato.setText(String.format("$1.2", prato.getPreco()));
         holder.imagemPrato.setBackgroundResource(prato.getImage());
-        // TODO: Recurso local -> alterar para uma lib
-        //  holder.imagemPrato.setBackgroundResource(prato.getImage());
 
         return listItemView;
     }
