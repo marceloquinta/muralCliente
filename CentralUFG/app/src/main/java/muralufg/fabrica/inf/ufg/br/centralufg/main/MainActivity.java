@@ -74,14 +74,10 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CollectionFragments;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
-<<<<<<< HEAD
 import muralufg.fabrica.inf.ufg.br.centralufg.locais.fragments.LocaisFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.view.cartao.CartoesListFragment;
-=======
->>>>>>> 6d1274fda94a551ea94384958417baabecb6fab5
 import muralufg.fabrica.inf.ufg.br.centralufg.gcm.GCMRegister;
 import muralufg.fabrica.inf.ufg.br.centralufg.linhasdeonibus.fragments.LinhasDeOnibusFragment;
-import muralufg.fabrica.inf.ufg.br.centralufg.util.view.cartao.CartoesListFragment;
 
 
 public class MainActivity extends ActionBarActivity {
