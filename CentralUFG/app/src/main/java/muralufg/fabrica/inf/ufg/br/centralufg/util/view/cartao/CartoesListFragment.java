@@ -51,17 +51,16 @@ public class CartoesListFragment extends Fragment implements AdapterView.OnItemC
     private List<Cartao> geraCartoes() {
         List<Cartao> cartaoDados = new ArrayList<Cartao>();
         cartaoDados.add(criarcartao("Titulo 1", "21/10/2014", "Este é um texto de teste para o card numero 1", R.drawable.imagem));
-        cartaoDados.add(criarcartao("Titulo 2", "21/10/2014", "Este é um texto de teste para o card numero 2", R.drawable.imagem));
-        cartaoDados.add(criarcartao("Título 3", "21/10/2014", "Este é um texto de teste para o card numero 3", R.drawable.imagem));
-        cartaoDados.add(criarcartao("Título 4", "21/10/2014", "Este é um texto de teste para o card numero 4", R.drawable.imagem));
-        cartaoDados.add(criarcartao("Título 5", "21/10/2014", "Este é um texto de teste para o card numero 5", R.drawable.imagem));
+        cartaoDados.add(criarcartao("Titulo 2", "22/10/2014", "Este é um texto de teste para o card numero 2", R.drawable.imagem));
+        cartaoDados.add(criarcartao("Título 3", "23/10/2014", "Este é um texto de teste para o card numero 3", R.drawable.imagem));
+        cartaoDados.add(criarcartao("Título 4", "24/10/2014", "Este é um texto de teste para o card numero 4", R.drawable.imagem));
+        cartaoDados.add(criarcartao("Título 5", "25/10/2014", "Este é um texto de teste para o card numero 5", R.drawable.imagem));
 
         return cartaoDados;
     }
 
     private Cartao criarcartao(String titulo, String data, String descricao, int image) {
-        Cartao cartao = new Cartao(titulo, data, descricao, image);
-        return cartao;
+         return new Cartao(titulo, data, descricao, image);
     }
 
 

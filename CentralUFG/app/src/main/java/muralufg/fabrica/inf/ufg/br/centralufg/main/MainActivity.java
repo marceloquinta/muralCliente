@@ -1,52 +1,52 @@
 /*
  * ====================================================================
- * Licença da Fábrica de Software (UFG)
+ * LicenÃ§a da FÃ¡brica de Software (UFG)
  *
- * Copyright (c) 2014 Fábrica de Software
- * Instituto de Informática (Universidade Federal de Goiás)
+ * Copyright (c) 2014 FÃ¡brica de Software
+ * Instituto de InformÃ¡tica (Universidade Federal de GoiÃ¡s)
  * Todos os direitos reservados.
  *
- * Redistribuição e uso, seja dos fontes ou do formato binário
- * correspondente, com ou sem modificação, são permitidos desde que
- * as seguintes condições sejam atendidas:
+ * RedistribuiÃ§Ã£o e uso, seja dos fontes ou do formato binÃ¡rio
+ * correspondente, com ou sem modificaÃ§Ã£o, sÃ£o permitidos desde que
+ * as seguintes condiÃ§Ãµes sejam atendidas:
  *
- * 1. Redistribuição do código fonte deve conter esta nota, em sua
- *    totalidade, ou seja, a nota de copyright acima, as condições
- *    e a observação sobre garantia abaixo.
+ * 1. RedistribuiÃ§Ã£o do cÃ³digo fonte deve conter esta nota, em sua
+ *    totalidade, ou seja, a nota de copyright acima, as condiÃ§Ãµes
+ *    e a observaÃ§Ã£o sobre garantia abaixo.
  *
- * 2. Redistribuição no formato binário deve reproduzir o conteúdo
+ * 2. RedistribuiÃ§Ã£o no formato binÃ¡rio deve reproduzir o conteÃºdo
  *    desta nota, em sua totalidade, ou seja, o copyright acima,
- *    esta lista de condições e a observação abaixo na documentação
- *    e/ou materiais fornecidos com a distribuição.
+ *    esta lista de condiÃ§Ãµes e a observaÃ§Ã£o abaixo na documentaÃ§Ã£o
+ *    e/ou materiais fornecidos com a distribuiÃ§Ã£o.
  *
- * 3. A documentação fornecida com a redistribuição,
+ * 3. A documentaÃ§Ã£o fornecida com a redistribuiÃ§Ã£o,
  *    qualquer que seja esta, deve incluir o seguinte
  *    texto, entre aspas:
- *       "Este produto inclui software desenvolvido pela Fábrica
- *       de Software do Instituto de Informática (UFG)."
+ *       "Este produto inclui software desenvolvido pela FÃ¡brica
+ *       de Software do Instituto de InformÃ¡tica (UFG)."
  *
- * 4. Os nomes Fábrica de Software, Instituto de Informática e UFG
- *    não podem ser empregados para endoçar ou promover produtos
- *    derivados do presente software sem a explícita permissão
+ * 4. Os nomes FÃ¡brica de Software, Instituto de InformÃ¡tica e UFG
+ *    nÃ£o podem ser empregados para endoÃ§ar ou promover produtos
+ *    derivados do presente software sem a explÃ­cita permissÃ£o
  *    por escrito.
  *
- * 5. Produtos derivados deste software não podem ser chamados
- *    "Fábrica de Software", "Instituto de Informática", "UFG",
- *    "Universidade Federal de Goiás" ou contê-los em seus nomes,
- *    sem permissão por escrito.
+ * 5. Produtos derivados deste software nÃ£o podem ser chamados
+ *    "FÃ¡brica de Software", "Instituto de InformÃ¡tica", "UFG",
+ *    "Universidade Federal de GoiÃ¡s" ou contÃª-los em seus nomes,
+ *    sem permissÃ£o por escrito.
  *
- * ESTE SOFTWARE É FORNECIDO "COMO ESTÁ". NENHUMA GARANTIA É FORNECIDA,
- * EXPLÍCITA OU NÃO. NÃO SE AFIRMA QUE O PRESENTE SOFTWARE
- * É ADEQUADO PARA QUALQUER QUE SEJA O USO. DE FATO, CABE AO
- * INTERESSADO E/OU USUÁRIO DO PRESENTE SOFTWARE, IMEDIATO OU NÃO,
- * ESTA AVALIAÇÃO E A CONSEQUÊNCIA QUE O USO DELE OCASIONAR. QUALQUER
- * DANO QUE DESTE SOFTWARE DERIVAR DEVE SER ATRIBUÍDO AO INTERESSADO
- * E/OU USUÁRIO DESTE SOFTWARE.
+ * ESTE SOFTWARE Ã‰ FORNECIDO "COMO ESTÃ�". NENHUMA GARANTIA Ã‰ FORNECIDA,
+ * EXPLÃ�CITA OU NÃƒO. NÃƒO SE AFIRMA QUE O PRESENTE SOFTWARE
+ * Ã‰ ADEQUADO PARA QUALQUER QUE SEJA O USO. DE FATO, CABE AO
+ * INTERESSADO E/OU USUÃ�RIO DO PRESENTE SOFTWARE, IMEDIATO OU NÃƒO,
+ * ESTA AVALIAÃ‡ÃƒO E A CONSEQUÃŠNCIA QUE O USO DELE OCASIONAR. QUALQUER
+ * DANO QUE DESTE SOFTWARE DERIVAR DEVE SER ATRIBUÃ�DO AO INTERESSADO
+ * E/OU USUÃ�RIO DESTE SOFTWARE.
  * ====================================================================
  *
- * Este software é resultado do trabalho de voluntários, estudantes e
- * professores, ao realizar atividades no âmbito da Fábrica de Software
- * do Instituto de Informática (UFG). Consulte <http://fs.inf.ufg.br>
+ * Este software Ã© resultado do trabalho de voluntÃ¡rios, estudantes e
+ * professores, ao realizar atividades no Ã¢mbito da FÃ¡brica de Software
+ * do Instituto de InformÃ¡tica (UFG). Consulte <http://fs.inf.ufg.br>
  * para detalhes.
  */
 package muralufg.fabrica.inf.ufg.br.centralufg.main;
@@ -73,10 +73,11 @@ import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 import muralufg.fabrica.inf.ufg.br.centralufg.R;
 import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CollectionFragments;
-import muralufg.fabrica.inf.ufg.br.centralufg.compromisso.fragments.CompromissoFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.frasedodia.fragments.FraseDoDiaFragment;
+import muralufg.fabrica.inf.ufg.br.centralufg.locais.fragments.LocaisFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.util.view.cartao.CartoesListFragment;
 import muralufg.fabrica.inf.ufg.br.centralufg.gcm.GCMRegister;
+import muralufg.fabrica.inf.ufg.br.centralufg.linhasdeonibus.fragments.LinhasDeOnibusFragment;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -130,10 +131,15 @@ public class MainActivity extends ActionBarActivity {
         "close drawer" description
         */
         mDrawerToggle = new ActionBarDrawerToggle(
+                /* host Activity */
                 this,
+                /* DrawerLayout object */
                 mDrawerLayout,
+                /* nav drawer icon to replace 'Up' caret */
                 R.drawable.ic_drawer,
+                /* "open drawer" description */
                 R.string.label_menu,
+                /* "close drawer" description */
                 R.string.label_fechar
         ) {
 
@@ -166,7 +172,7 @@ public class MainActivity extends ActionBarActivity {
             }
 
         } else {
-            Log.i(TAG, "Não encontrado Google Play Services APK válido.");
+            Log.i(TAG, "NÃ£o encontrado Google Play Services APK vÃ¡lido.");
         }
     }
 
@@ -191,11 +197,11 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
-     public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
 
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
-        }else{
+        } else {
             Crouton.makeText(this, item.getTitle() + " selecionado", Style.INFO).show();
         }
 
@@ -209,10 +215,12 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    /** Swaps fragments in the main content view */
+    /**
+     * Swaps fragments in the main content view
+     */
     private void selectItem(int position) {
         // Create a new fragment and specify the planet to show based on position
-        Fragment fragment =getFragmentFromPosition(position);
+        Fragment fragment = getFragmentFromPosition(position);
         Bundle args = new Bundle();
         fragment.setArguments(args);
 
@@ -228,23 +236,22 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
-    private Fragment getFragmentFromPosition(int position){
-        switch (position){
+    private Fragment getFragmentFromPosition(int position) {
+        switch (position) {
             case 0:
                 return new HelloFragment();
-
             case 1:
                 return new FraseDoDiaFragment();
-
             case 2:
                 return new CartoesListFragment();
-
             case 3:
                 return new CollectionFragments();
-
+            case 4:
+                return new LinhasDeOnibusFragment();
+            case 5:
+                return new LocaisFragment();
             default:
-                Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida),
-                        Style.ALERT).show();
+                Crouton.makeText(this, getResources().getString(R.string.alerta_opcao_invalida), Style.ALERT).show();
                 return new HelloFragment();
         }
     }
