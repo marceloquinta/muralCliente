@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="72dp"
+    android:background="@color/gplus_color_10">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/corpo_imagem_classificado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/corpo_descricao_classificado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="3dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/corpo_email_classificado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="3dp"
+        android:layout_gravity="end"
+        android:textSize="16sp"
+        android:autoLink="email"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+</LinearLayout>
