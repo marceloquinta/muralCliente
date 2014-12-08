@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayoutRestaurante"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <!-- Imagem do restaurante utilizando a API Volley -->
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/imagemRestaurante"
+        android:src="@android:drawable/ic_menu_camera"/>
+
+    <!-- TextView para nome do restaurante -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nome do Restaurante"
+        android:id="@+id/textViewNomeRestaurante"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="6dp" />
+
+    <!-- TextView para telefone do restaurante -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Telefone"
+        android:id="@+id/textViewTelefoneRestaurante"
+        android:layout_marginBottom="6dp" />
+
+    <!-- TextView para endereço do restaurante -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Endereço"
+        android:id="@+id/textViewEnderecoRestaurante" />
+
+    <!-- Botão para ligar para restaurante -->
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Ligar"
+        android:id="@+id/botaoDiscarRestaurante"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewAvaliar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avaliar"
+            android:textSize="@dimen/nome_restaurante"/>
+
+        <RatingBar
+            android:id="@+id/ratingBarRestaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/textViewAvaliar"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:rating="3.0" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBarRestaurante">
+
+            <TextView
+                android:id="@+id/textViewResultadoRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resultado : "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textViewValorRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/botaoSubmeterRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayout1"
+            android:text="Submeter Avaliação" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="nome_restaurante">#666666</color>
+    <color name="telefone_restaurante">#888888</color>
+    <color name="list_divider_restaurante">#d9d9d9</color>
+    <color name="list_row_start_color_restaurante">#ffffff</color>
+    <color name="list_row_end_color_restaurante">#ffffff</color>
+    <color name="list_row_hover_start_color_restaurante">#ebeef0</color>
+    <color name="list_row_hover_end_color_restaurante">#ebeef0</color>
+
+</resources>

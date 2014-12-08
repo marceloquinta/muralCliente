@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector_restaurante"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Imagem do restaurante pela API Volley -->
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imagemRestaurantes"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imagemRestaurantes">
+
+        <!-- TextView nome do restaurante -->
+        <TextView
+            android:id="@+id/textViewNomeRestaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Nome Restaurante"
+            android:textColor="@color/nome_restaurante"
+            android:textSize="@dimen/nome_restaurante"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- TextView telefone do restaurante -->
+        <TextView
+            android:id="@+id/textViewTelefoneRestaurante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNomeRestaurante"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="Telefone Restaurante"
+            android:textColor="@color/telefone_restaurante"
+            android:textSize="@dimen/telefone_restaurante"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+
+</RelativeLayout>
