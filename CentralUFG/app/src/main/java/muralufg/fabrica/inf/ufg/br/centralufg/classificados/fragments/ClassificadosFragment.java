@@ -108,22 +108,6 @@ public class ClassificadosFragment extends Fragment {
         expandableListView = (ExpandableListView) getView().findViewById(R.id.expandableListView);
         expandableListView.setAdapter(listAdapter);
 
-//        /* Serve para acionar o refresh apenas se o primeiro item da lista estiver totalmente visível */
-//        expandableListView.setOnScrollListener(new AbsListView.OnScrollListener() {
-////            @Override
-////            public void onScrollStateChanged(AbsListView absListView, int i) {
-////
-////            }
-//
-//            @Override
-//            public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-//                if (firstVisibleItem == 0)
-//                    swipeLayout.setEnabled(true);
-//                else
-//                    swipeLayout.setEnabled(false);
-//            }
-//        });
-
         swipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
